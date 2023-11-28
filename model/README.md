@@ -1,12 +1,13 @@
-# Random Forest Regression Model
-This folder contains the final trained model for predicting flight prices.
+# Flight Price Prediction using Random Forest Regression
 
-### Model scores:
-| Metric | Score |
-|:---|:---:|
-| Precision | 0.82 |
-| Recall | 0.63 |
-| F1 | 0.71 |
-| Accuracy | 0.89 |
+Contained within this folder is the conclusive trained model specifically designed to forecast flight prices accurately.
 
-Therefore, the model is able to predict flight ticket prices within around  ≈ $61.87.
+### Model Performance Metrics:
+| Metric   | Score |
+|:---------|:-----:|
+| Precision| 0.82  |
+| Recall   | 0.63  |
+| F1 Score | 0.71  |
+| Accuracy | 0.89  |
+
+Consequently, the model demonstrates a proficiency in predicting flight ticket prices within an approximate range of $61.87.
