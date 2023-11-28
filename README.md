@@ -2,37 +2,48 @@
 
 The fundamental goal of this project centers around the predictive forecasting of flight ticket prices, intending to equip travelers with the necessary tools to streamline their journey planning while ensuring economic feasibility. Commencing this journey involved the meticulous extraction of data from the Kayak platform (https://www.kayak.com/) to form the foundation for constructing a robust and adaptable regression model capable of forecasting flight ticket prices.
 
+# Contents
+- [Project Proposal pdf](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/Documents/Proposal.pdf)
+- [Presentation pptx](https://github.com/maitreyee290897/FlightPricePrediction/tree/master/Documents/Presentations)
+- [Project Report pdf](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/Documents/Report_FlightPricePrediction.pdf)
+- [Kayak Scraper Notebook](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/kayak-scraper.ipynb)
+- [Scraped Data in CSVs](https://github.com/maitreyee290897/FlightPricePrediction/tree/master/data)
+- [Flight Prediction Project Notebook](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/flight-price-prediction.ipynb)
+- [Final Model zip](https://github.com/maitreyee290897/FlightPricePrediction/tree/master/model)
+
+
 ## Project Proposal
 
-The primary objective is to provide travelers with a predictive model that aids in choosing the most cost-effective flight options for their desired destinations and travel schedules. The approach involves employing a linear regression model built upon data extracted from prominent travel platforms like Momondo, Kayak, and Expedia. Factors such as previous flight prices, destination, departure details, class, and airline information will be crucial inputs to our predictive model. The dataset will be meticulously curated by scraping data from multiple travel websites, ensuring a comprehensive and up-to-date collection of flight information. Furthermore, integration of data from the "Search Engine Results - Flights & Tickets Keywords Dataset" will offer valuable insights into the top-ranked destinations on Google. To execute this project, the team plans to utilize tools like Selenium and BeautifulSoup for web scraping, Scikit-learn and Statsmodels for regression modeling, Numpy and Pandas for data manipulation, and Matplotlib, Seaborn, and Tableau for data visualization. By following this streamlined approach, the project aims to empower travelers with informed decision-making tools, facilitating their quest to find the best flight prices and optimal travel schedules.
+The project aims to create a predictive model enabling travelers to select cost-effective flight options. It involves using a linear regression model built on data from platforms like Momondo, Kayak, and Expedia. Input factors like past flight prices, destination, departure specifics, class, and airline data will drive the model. The dataset will be compiled by scraping data from various travel sites and integrating insights from the "Search Engine Results - Flights & Tickets Keywords Dataset." Tools like Selenium, BeautifulSoup, Scikit-learn, Statsmodels, Numpy, Pandas, Matplotlib, Seaborn, and Tableau will be used for web scraping, regression modeling, data manipulation, and visualization. The project aims to empower travelers by providing tools for informed decision-making to find optimal flight prices and schedules.
+#### The project proposal can be found [here](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/Documents/Proposal.pdf).
 
 ## Project Abstract
 
-In the realm of modern travel, securing optimal flights at competitive prices is pivotal for seamless journey planning. This project aims to provide travelers with a reliable tool for predicting flight ticket prices, leveraging innovative data-driven approaches. Utilizing web scraping techniques from Kayak and various Python libraries, the initiative endeavors to equip travelers with informed decisions regarding cost-effective flights. The primary objective involves constructing a predictive model capable of forecasting flight ticket prices. Commencing with meticulous data scraping from https://www.kayak.com, a comprehensive dataset was curated, followed by rigorous preprocessing to ensure the model's resilience. The methodology involved Selenium and BeautifulSoup alongside Python libraries like Pandas, NumPy, and tqdm, culminating in a dataset covering diverse routes and dates from February 1, 2024, to April 30, 2024. Thorough exploratory data analysis, including cleaning and outlier handling through the Interquartile Range method, led to a refined dataset encompassing critical flight information. Further preprocessing involved categorical data handling and one-hot encoding, facilitating comprehensive feature analysis and model development. Multiple regression models were trained and evaluated, with the RandomForestRegressor emerging as the optimal choice due to superior performance metrics. The final model demonstrated exceptional predictive capabilities, validating its efficiency in forecasting flight ticket prices within an approximate range of $61.87, empowering travelers to make informed and cost-effective travel decisions.
+This project aims to predict flight ticket prices, leveraging innovative data-driven methods from Kayak and Python libraries. It starts with meticulous data scraping from https://www.kayak.com to create a dataset covering diverse routes and dates. Rigorous preprocessing and outlier handling refine this dataset. Using techniques like categorical data handling and one-hot encoding, the project undergoes comprehensive feature analysis and model development. Among multiple regression models, the RandomForestRegressor excels, predicting prices within an approximate $61.87 range. This empowers travelers to make informed and cost-effective decisions.
 
 ## Scraping
 
 The data extraction from Kayak (https://www.kayak.com/) stands as a cornerstone in our project, playing a pivotal role in building a comprehensive dataset essential for rigorously testing and validating our regression model's effectiveness. This dataset serves as more than just a compilation of flight information; it forms the backbone for our model's adaptability and accuracy across diverse flight scenarios. Our project's main goal is to empower travelers by facilitating informed decisions, optimizing travel plans, and ensuring access to the most economically viable flight options available.
 
-#### The project proposal can be found [here](https://github.com/maitreyee290897/).
-
 The meticulous data extraction process from Kayak was crucial for obtaining a dataset essential for testing the regression model's effectiveness across diverse flight scenarios. This dataset acts as a foundation, ensuring the model's adaptability and accuracy. Our dedication to utilizing data-driven insights to empower travelers remains unwavering.
 
 The scraping methodology involved user interaction to input specific routes and dates. It commenced by prompting users to input origin and destination cities for desired flight routes, allowing multiple routes to be entered until completion was indicated. Subsequently, the system prompted users to input start and end dates in "YYYY-MM-DD" format to define the desired flight data collection duration. The scraping process, meticulously architected to target specific routes and date ranges, utilized Selenium and BeautifulSoup to navigate Kayak's web interface accurately. User-defined parameters enabled the extraction of relevant flight information for targeted analysis and future reference.
 
-#### The Kayak Scraper Notebook can be found [here](https://github.com/maitreyee290897/).
+#### The Kayak Scraper Notebook can be found [here](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/kayak-scraper.ipynb).
 
-The scraping implementation involved a systematic approach using Python's versatile toolset, leveraging Selenium's automation capabilities and BeautifulSoup's parsing prowess for data extraction. NumPy facilitated effective data processing, while tqdm ensured comprehensive progress tracking during the extraction process. The systematic loop through defined routes and dates facilitated data extraction, organizing flight information into structured dataframes based on airlines, sources, destinations, durations, stops, prices, and dates. The collected information for each route was stored as separate CSV files for focused analysis and easy access.
+The data extraction from Kayak (https://www.kayak.com/) is crucial, forming the foundation for our regression model's testing and adaptability across various flights. It's more than flight information; it's key to empowering travelers with informed decisions and cost-effective options.
+
+Our meticulous data extraction involved user input for routes and dates, ensuring a targeted approach. Using Selenium and BeautifulSoup, we precisely navigated Kayak's interface for relevant flight data. This user-defined approach allows for focused analysis and future reference.
 
 The outcome of our scraping efforts was a comprehensive dataset spanning from February 1, 2024, to April 30, 2024, covering 12 specific routes. These routes included significant flight paths such as RUH => NYC, NYC => PAR, and PAR => SVO, among others. This meticulously curated dataset serves as the foundational bedrock essential for training and refining our predictive models, paving the way for precise flight price predictions.
 
-#### The scraped data can be found [here](https://github.com/maitreyee290897/).
+#### The scraped data can be found [here](https://github.com/maitreyee290897/FlightPricePrediction/tree/master/data).
 
 #### In total, the data consists of 55,363 rows and 7 columns.
 
 ## Analysis and Results
 
-#### The project notebook can be found [here](https://github.com/maitreyee290897/).
+#### The project notebook can be found [here](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/flight-price-prediction.ipynb).
 
 #### Selected features are:
 
@@ -67,7 +78,7 @@ After an extensive analysis of regression models, the Random Forest algorithm em
 
 #### Therefore, the final model is able to predict flight ticket prices within around ≈ $61.87.
 
-#### The final model can be found [here](https://github.com/maitreyee290897/).
+#### The final model can be found [here](https://github.com/maitreyee290897/FlightPricePrediction/tree/master/model).
 
 ### Results
 
@@ -78,7 +89,11 @@ In conclusion, our RandomForestRegressor model exhibited remarkable predictive p
 
 ## Presentation
 
-#### The presentation can be found [here](https://github.com/maitreyee290897/).
+#### The presentation can be found [here](https://github.com/maitreyee290897/FlightPricePrediction/tree/master/Documents/Presentations).
+
+
+## Report
+#### The Project Report can be found [here](https://github.com/maitreyee290897/FlightPricePrediction/blob/master/Documents/Report_FlightPricePrediction.pdf).
 
 ## Authors <a name="authors"/>
 
