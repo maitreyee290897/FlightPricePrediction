@@ -1,4 +1,4 @@
-# flight-price-prediction
+# Flight Price Prediction
 
 The fundamental goal of this project centers around the predictive forecasting of flight ticket prices, intending to equip travelers with the necessary tools to streamline their journey planning while ensuring economic feasibility. Commencing this journey involved the meticulous extraction of data from the Kayak platform (https://www.kayak.com/) to form the foundation for constructing a robust and adaptable regression model capable of forecasting flight ticket prices.
 
